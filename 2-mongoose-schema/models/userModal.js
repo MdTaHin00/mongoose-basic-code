@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
         //* type:String -> email string value hova
         type: String,
         //*  require:true -> ai user a email na thkaly from submit hova na 
-        require: true,
+        required: true,
         //* unique:true -> same email akadik hova na
         unique: true
     },
@@ -37,7 +37,7 @@ const userSchema = new mongoose.Schema({
     address:{
       street:{
         type:String,
-        require:true
+        required:true
       },
       city:String,
       state:String,
@@ -57,5 +57,5 @@ const userSchema = new mongoose.Schema({
 //* userSchema -> oporal schema ta 
 const UserModel = mongoose.model('User',userSchema);
 
-//? export kola
+//! export require
 module.exports = UserModel;
